@@ -4,9 +4,10 @@
   "description": "An app to calculate the tempo (in beats-per-minute) of a piece of music.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "build": "parcel build"
   },
-  "keywords": ["BPM", "Beat counter", "Music", "Tempo"],
   "keywords": [
     "BPM",
     "Beat counter",
@@ -14,5 +15,15 @@
     "Tempo"
   ],
   "author": "Kaboom Shebang",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
+    "parcel": "^2.7.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
