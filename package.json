@@ -1,0 +1,12 @@
+{
+  "name": "kbsb-tempo-tapper",
+  "version": "1.0.0",
+  "description": "An app to calculate the tempo (in beats-per-minute) of a piece of music.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["BPM", "Beat counter", "Music", "Tempo"],
+  "author": "Kaboom Shebang",
+  "license": "ISC"
+}
