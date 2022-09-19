@@ -4,6 +4,11 @@
 @import 'normalize.css';
 
 /* component imports */
+@import 'components/nav.css';
+@import 'components/menu.css';
+@import 'components/tapBox.css';
+
+/* mobile first, desktop second */
 
 :root {
 	--white: #ffffff;
