@@ -1,0 +1,37 @@
+/* IBM Plex fonts */
+@import url('https://assets.kbsb.app/fonts/ibm_plex_sans/font_ibm_plex_sans.css');
+
+@import 'normalize.css';
+
+/* component imports */
+
+:root {
+	--white: #ffffff;
+	--dark: #181818;
+	--red: #ba2525;
+	--grey-dark: #a3a3a3;
+	--grey-light: #ededed;
+	--margin-s: 20px;
+	--padding-s: 20px;
+}
+
+html {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-feature-settings: 'kern' 1;
+	font-kerning: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	font-size: 16px;
+}
+
+body {
+	background-color: var(--dark);
+	color: var(--white);
+}
+
+@media only screen and (min-width: 400px) {
+	html {
+		font-size: 20px;
+	}
+}
