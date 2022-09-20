@@ -17,6 +17,7 @@
 	left: calc(var(--padding-s) - 1px);
 	font-size: 1rem;
 	font-weight: 400;
+	color: var(--grey-dark);
 }
 
 #navbar button {
