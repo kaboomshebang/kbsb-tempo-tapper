@@ -3,17 +3,18 @@
 const iconLogo = new URL('../assets/svg/icon-shebang-bw-small-zoomed.svg', import.meta.url);
 const iconCross = new URL('../assets/svg/icon-menu-cross.svg', import.meta.url);
 const imgShebang = new URL('../assets/svg/image-shebang-3d.svg', import.meta.url);
+const currentYear = new Date().getFullYear();
 
 export function NavMenu(props) {
-	const currentYear = new Date().getFullYear();
-
 	return (
 		<>
 			<div id="menu-bg-overlay">{/* dark background overlay */}</div>
 			<div id="menu">
 				<div className="bar">
 					<img src={iconLogo.toString()} alt="Shebang" />
-					<img src={iconCross.toString()} alt="Cross" />
+					<button>
+						<img src={iconCross.toString()} alt="Cross" />
+					</button>
 				</div>
 				<div className="content-wrapper">
 					<h3>About</h3>
