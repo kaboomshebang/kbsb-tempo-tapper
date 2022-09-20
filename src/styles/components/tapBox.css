@@ -13,10 +13,29 @@
 	max-height: var(--button-width);
 	padding: 10%;
 	background-color: var(--red);
+	transition: background-color 50ms, box-shadow 100ms;
 	border-radius: 10px;
 }
 
 #tapbox svg {
 	max-width: calc(var(--button-width) * 0.8);
 	height: auto;
+	transition: transform 200ms;
+}
+
+#tapbox svg path {
+	transition: fill 200ms;
+}
+
+#tapbox button:active {
+	background-color: var(--grey-dark);
+	box-shadow: 0px 0px 60px 10px var(--red);
+}
+
+#tapbox button:active svg {
+	transform: scale(1.3);
+}
+
+#tapbox button:active svg path {
+	fill: var(--dark);
 }
