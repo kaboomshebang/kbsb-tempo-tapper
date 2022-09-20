@@ -9,7 +9,9 @@ export function NavBar() {
 		<div id="navbar">
 			<div>
 				<h1>
-					<img src={logoKaboom.toString()} alt="Kaboom" />
+					<a href="https://www.kaboomshebang.com" target="_blank" rel="noopener noreferrer">
+						<img src={logoKaboom.toString()} alt="Kaboom" />
+					</a>
 				</h1>
 				<h2>BPM Tempo Tapper</h2>
 			</div>
