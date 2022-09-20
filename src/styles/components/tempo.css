@@ -3,6 +3,7 @@
 	flex-direction: column;
 	flex-grow: 1;
 	justify-content: space-between;
+	user-select: none;
 }
 
 #tempo .button-wrapper {

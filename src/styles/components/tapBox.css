@@ -13,9 +13,10 @@
 	max-height: var(--button-width);
 	padding: 10%;
 	background-color: var(--red);
+	border-radius: 10px;
 }
 
 #tapbox svg {
-	max-width: var(--button-width);
+	max-width: calc(var(--button-width) * 0.8);
 	height: auto;
 }
