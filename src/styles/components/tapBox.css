@@ -1,0 +1,21 @@
+#tapbox {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+#tapbox button {
+	--button-width: 8rem;
+	display: block;
+	all: unset;
+	max-width: var(--button-width);
+	max-height: var(--button-width);
+	padding: 10%;
+	background-color: var(--red);
+}
+
+#tapbox svg {
+	max-width: var(--button-width);
+	height: auto;
+}

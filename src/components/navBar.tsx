@@ -6,18 +6,21 @@ const iconBurger = new URL('../assets/svg/icon-burger.svg', import.meta.url);
 export function NavBar() {
 	console.log(logoKaboom);
 	return (
-		<div id="nav">
-			<h1>
-				<img src={logoKaboom.toString()} alt="Kaboom" />
-			</h1>
-			<h2>Tempo Tapper</h2>
-			<nav>
-				{/* add onclick */}
-				<button>
-					<img src={iconBurger.toString()} alt="Menu" />
-				</button>
-			</nav>
-			<NavMenu />
+		<div id="navbar">
+			<div>
+				<h1>
+					<img src={logoKaboom.toString()} alt="Kaboom" />
+				</h1>
+				<h2>BPM Tempo Tapper</h2>
+			</div>
+			<button
+				onClick={() => {
+					console.log('click');
+				}}
+			>
+				<img src={iconBurger.toString()} alt="Menu" />
+			</button>
+			<NavMenu visible={false} />
 		</div>
 	);
 }

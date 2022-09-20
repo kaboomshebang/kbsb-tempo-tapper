@@ -1,0 +1,46 @@
+#tempo {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-between;
+}
+
+#tempo .button-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#tempo .tempo-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+#tempo .int {
+	font-size: 6rem;
+	font-weight: 700;
+	color: #fff;
+}
+
+#tempo .float {
+	font-size: 2rem;
+}
+
+#tempo .bpm {
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 0 0 0 1rem;
+}
+
+#tempo button {
+	all: unset;
+	background-color: #111;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: 1px solid #3e3e3e;
+}

@@ -6,16 +6,22 @@
 /* component imports */
 @import 'components/nav.css';
 @import 'components/menu.css';
+@import 'components/tempo.css';
 @import 'components/tapBox.css';
 
 /* mobile first, desktop second */
 
 :root {
-	--white: #ffffff;
+	--light: #ffffff;
 	--dark: #181818;
+
 	--red: #ba2525;
 	--grey-dark: #a3a3a3;
 	--grey-light: #ededed;
+
+	--text-primary: #dddddd;
+	--text-secondary: #4b4b4b;
+
 	--margin-s: 20px;
 	--padding-s: 20px;
 }
@@ -32,7 +38,21 @@ html {
 
 body {
 	background-color: var(--dark);
-	color: var(--white);
+	color: var(--text-primary);
+}
+
+div#app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+main {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 4rem var(--padding-s);
 }
 
 @media only screen and (min-width: 400px) {

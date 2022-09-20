@@ -1,0 +1,24 @@
+#navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0 var(--padding-s);
+}
+
+#navbar h1 {
+	padding: 0 0;
+}
+
+#navbar h2 {
+	position: absolute;
+	top: 3rem;
+	left: calc(var(--padding-s) - 1px);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+#navbar button {
+	all: unset;
+}
