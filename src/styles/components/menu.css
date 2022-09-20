@@ -9,7 +9,7 @@
 }
 
 #menu {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	z-index: 10;
@@ -69,6 +69,24 @@
 	text-decoration: none;
 	display: block;
 	margin: 5px 0 0 0;
+}
+
+@media only screen and (min-width: 700px) {
+	#menu {
+		max-width: 50%;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	#menu {
+		max-width: 40%;
+	}
+}
+
+@media only screen and (min-width: 1300px) {
+	#menu {
+		max-width: 30%;
+	}
 }
 
 /* only adjust the min-height on iOS devices */
