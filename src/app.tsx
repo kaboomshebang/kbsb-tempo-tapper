@@ -1,7 +1,6 @@
 import { NavBar } from './components/navBar';
 import { TapBox } from './components/tapBox';
 import { Tempo } from './components/tempo';
-import { Footer } from './components/footer';
 
 export function App() {
 	return (
@@ -11,7 +10,6 @@ export function App() {
 				<Tempo />
 				<TapBox />
 			</main>
-			<Footer />
 		</>
 	);
 }
