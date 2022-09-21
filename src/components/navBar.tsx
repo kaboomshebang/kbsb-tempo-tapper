@@ -13,7 +13,9 @@ export function NavBar() {
 						<img src={logoKaboom.toString()} alt="Kaboom" />
 					</a>
 				</h1>
-				<h2>BPM Tempo Tapper</h2>
+				<h2>
+					BPM Tempo Tapper <span className="nav-url">bpm.kbsb.app</span>
+				</h2>
 			</div>
 			<button
 				onClick={() => {

@@ -24,6 +24,15 @@ h2 {
 	color: var(--grey-dark);
 }
 
+#navbar h2 span.nav-url {
+	position: absolute;
+	top: 1.25rem;
+	left: 0;
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: var(--red);
+}
+
 #navbar button {
 	all: unset;
 }
