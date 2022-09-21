@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { NavMenu } from './navMenu';
 
 const logoKaboom = new URL('../assets/svg/logo-kaboom.svg', import.meta.url);
 const iconBurger = new URL('../assets/svg/icon-burger.svg', import.meta.url);
 
 export function NavBar() {
+	const [menu, setMenu] = useState(false);
+
 	console.log(logoKaboom);
 	return (
 		<div id="navbar">
@@ -19,12 +22,12 @@ export function NavBar() {
 			</div>
 			<button
 				onClick={() => {
-					console.log('click');
+					setMenu(!menu);
 				}}
 			>
 				<img src={iconBurger.toString()} alt="Menu" />
 			</button>
-			<NavMenu visible={false} />
+			<NavMenu menuState={menu} menuHandler={setMenu} />
 		</div>
 	);
 }
