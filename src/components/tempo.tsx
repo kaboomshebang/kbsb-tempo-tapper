@@ -1,9 +1,8 @@
 export function Tempo() {
+export function Tempo(props) {
 	return (
 		<div id="tempo">
-			<div className="button-wrapper">
-				<button>Reset</button>
-			</div>
+			{props.children}
 			<div className="tempo-wrapper">
 				<div>
 					<span className="int">124</span>
