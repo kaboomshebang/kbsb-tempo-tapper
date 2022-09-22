@@ -7,7 +7,6 @@ const iconBurger = new URL('../assets/svg/icon-burger.svg', import.meta.url);
 export function NavBar() {
 	const [menu, setMenu] = useState(false);
 
-	console.log(logoKaboom);
 	return (
 		<div id="navbar">
 			<div>
