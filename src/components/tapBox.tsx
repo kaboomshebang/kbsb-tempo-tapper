@@ -1,7 +1,17 @@
-export function TapBox() {
+export function TapBox(props) {
 	return (
 		<div id="tapbox">
-			<button>
+			<div>{props.taps}</div>
+			<button
+				onClick={() => {
+					props.tapHandler(props.taps + 1);
+					props.timeHandler([...props.time, new Date().getTime()]);
+				}}
+				onKeyDown={() => {
+					props.tapHandler(props.taps + 1);
+					props.timeHandler([...props.time, new Date().getTime()]);
+				}}
+			>
 				<svg width="196" height="178" viewBox="0 0 196 178" xmlns="http://www.w3.org/2000/svg">
 					<path d="M195.789 132.111H144.337V176.895H195.789V132.111Z" fill="#fff" />
 					<path d="M195.789 1.66211H144.337V110.529H195.789V1.66211Z" fill="#fff" />
