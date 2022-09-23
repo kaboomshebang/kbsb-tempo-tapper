@@ -1,13 +1,8 @@
 export function TapBox(props) {
 	return (
 		<div id="tapbox">
-			<div>{props.taps}</div>
 			<button
 				onClick={() => {
-					props.tapHandler(props.taps + 1);
-					props.timeHandler([...props.time, new Date().getTime()]);
-				}}
-				onKeyDown={() => {
 					props.tapHandler(props.taps + 1);
 					props.timeHandler([...props.time, new Date().getTime()]);
 				}}
