@@ -6,6 +6,7 @@
 /* component imports */
 @import 'components/nav.css';
 @import 'components/menu.css';
+@import 'components/stats.css';
 @import 'components/tempo.css';
 @import 'components/tapBox.css';
 

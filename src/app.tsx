@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavBar } from './components/navBar';
 import { TapBox } from './components/tapBox';
 import { Reset } from './components/reset';
+import { Stats } from './components/stats';
 import { Tempo } from './components/tempo';
 
 export function App() {
@@ -56,6 +57,7 @@ export function App() {
 					<Reset tapHandler={setTaps} resetHandler={setTime} bpmIntervalsHandler={setBpmIntervals} />
 				</Tempo>
 				<TapBox taps={taps} tapHandler={setTaps} time={time} timeHandler={setTime} />
+				<Stats taps={taps} tempo1={tempo1} tempo2={tempo2} />
 			</main>
 		</>
 	);
