@@ -8,7 +8,6 @@ Stack:
 - Javascript/Typescript
 - React
 - Parcel
-- Pnpm
 
 ## Figma project
 
@@ -23,3 +22,8 @@ yarn start
 # build for production
 yarn build
 ```
+
+## TODOs
+
+- [ ] Fine-tune tempo calculation
+- [ ] Add Typescript types
