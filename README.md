@@ -13,3 +13,13 @@ Stack:
 ## Figma project
 
 Designed in Figma: https://www.figma.com/file/2ZJYn0AqhrgN4zt11xqAET/kbsb.app_bpm-tempo-tapper?node-id=0%3A1
+
+## Notes
+
+```sh
+# start development server
+yarn start
+
+# build for production
+yarn build
+```
