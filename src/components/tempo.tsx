@@ -3,10 +3,9 @@ export function Tempo(props) {
 		<div id="tempo">
 			{props.children}
 			<div className="tempo-wrapper">
-				<div>{props.tempo}</div>
 				<div>
-					<span className="int">124</span>
-					<span className="float">.5</span>
+					<span className="int">{props.tempoInt}</span>
+					<span className="float">.{props.tempoFloat}</span>
 					<span className="bpm">BPM</span>
 				</div>
 			</div>

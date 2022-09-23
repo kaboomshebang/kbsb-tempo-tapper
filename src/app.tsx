@@ -53,8 +53,7 @@ export function App() {
 		<>
 			<NavBar />
 			<main>
-				<Tempo tempo={tempo}>
-					<Reset tapHandler={setTaps} resetHandler={setTime} bpmIntervalsHandler={setBpmIntervals} />
+				<Tempo taps={taps} tempoInt={tempoInt} tempoFloat={tempoFloat}>
 					<Reset
 						tapHandler={setTaps}
 						resetHandler={setTime}
