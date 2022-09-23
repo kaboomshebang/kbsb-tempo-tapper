@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vanilla JS version</title>
+        <style>
+            .stats > div {
+                overflow: scroll;
+            }
+
+            .mt {
+                margin: 40px 0 0 0;
+            }
+        </style>
+	</head>
+	<body>
+		<h1>Vanilla JS version</h1>
+		<hr />
+		<div>
+			<button id="tap">TAP</button>
+            <span> /// </span>
+			<button id="reset">RESET</button>
+            <span> /// </span>
+			<button id="test">TEST 120bpm</button>
+            <button id="test-stop">STOP TEST</button>
+		</div>
+		<hr />
+		<div class="stats">
+			<div id="intervals"></div>
+			<div id="bpms"></div>
+        </div>
+        <div class="stats mt">
+			<div id="av-bpm"></div>
+            <div id="time-bpm"></div>
+		</div>
+		<div class="stats mt">
+			<div id="tempo-list"></div>
+			<div id="tempo-interval-list"></div>
+		</div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>

@@ -1,6 +1,9 @@
 const iconLogo = new URL('../assets/svg/icon-shebang-bw-small-zoomed.svg', import.meta.url);
 const iconCross = new URL('../assets/svg/icon-menu-cross.svg', import.meta.url);
 const imgShebang = new URL('../assets/svg/image-shebang-3d.svg', import.meta.url);
+
+const vanilla = new URL('../vanilla/index.html', import.meta.url);
+
 const currentYear = new Date().getFullYear();
 
 export function NavMenu(props) {
@@ -11,13 +14,15 @@ export function NavMenu(props) {
 			</div>
 			<div id="menu" className={props.menuState ? 'show-menu' : 'hide-menu'}>
 				<div className="bar">
-					<img src={iconLogo.toString()} alt="Shebang" />
+					<a href={vanilla.toString()}>
+						<img src={iconLogo.toString()} alt="Shebang" />
+					</a>
 					<button
 						onClick={() => {
 							props.menuHandler(!props.menuState);
 						}}
 					>
-						<img src={iconCross.toString()} alt="Cross" />
+						<img src={iconCross.toString()} alt="Close menu" />
 					</button>
 				</div>
 				{/* ------------------------------------------------- */}
