@@ -55,6 +55,14 @@ export function App() {
 			<main>
 				<Tempo tempo={tempo}>
 					<Reset tapHandler={setTaps} resetHandler={setTime} bpmIntervalsHandler={setBpmIntervals} />
+					<Reset
+						tapHandler={setTaps}
+						resetHandler={setTime}
+						bpmIntervalsHandler={setBpmIntervals}
+						bpmAveragesHandler={setBpmAverages}
+						tempoHandler1={setTempo1}
+						tempoHandler2={setTempo2}
+					/>
 				</Tempo>
 				<TapBox taps={taps} tapHandler={setTaps} time={time} timeHandler={setTime} />
 				<Stats taps={taps} tempo1={tempo1} tempo2={tempo2} />

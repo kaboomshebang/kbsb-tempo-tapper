@@ -1,0 +1,20 @@
+#reset-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#reset-button button {
+	all: unset;
+	background-color: #111;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: 1px solid #3e3e3e;
+	transition: background-color 100ms;
+}
+
+#reset-button button:active {
+	border: 1px solid var(--red);
+	background-color: var(--red);
+}
