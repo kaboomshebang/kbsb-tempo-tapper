@@ -25,5 +25,5 @@ yarn build
 
 ## TODOs
 
-- [ ] Fine-tune tempo calculation
+- [X] Fine-tune tempo calculation
 - [ ] Add Typescript types
