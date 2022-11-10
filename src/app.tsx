@@ -102,7 +102,7 @@ export const App = () => {
 						tempoHandler2={setTempo2}
 					/>
 				</Tempo>
-				<TapBox taps={taps} tapHandler={setTaps} time={time} timeHandler={setTime} />
+				<TapBox tapHandler={setTaps} timeHandler={setTime} />
 				<Stats taps={taps} tempo1={tempo1} tempo2={tempo2} />
 			</main>
 		</>

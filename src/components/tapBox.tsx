@@ -1,7 +1,7 @@
 export const TapBox = (props) => {
 	const clickHandler = () => {
-		props.tapHandler(props.taps + 1);
-		props.timeHandler([...props.time, new Date().getTime()]);
+		props.tapHandler((prevState) => prevState + 1);
+		props.timeHandler((prevState) => [...prevState, new Date().getTime()]);
 	};
 
 	return (
