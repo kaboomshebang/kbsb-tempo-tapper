@@ -4,7 +4,7 @@ const iconCross = new URL('../assets/svg/icon-menu-cross.svg', import.meta.url);
 const imgShebang = new URL('../assets/svg/image-shebang-3d.svg', import.meta.url);
 
 // urls
-const vanilla = new URL('../vanilla/index.html', import.meta.url);
+const urlVanilla = new URL('../vanilla/index.html', import.meta.url);
 
 export const NavMenu = (props) => {
 	const currentYear = new Date().getFullYear();
@@ -20,7 +20,7 @@ export const NavMenu = (props) => {
 			</div>
 			<div id="menu" className={props.menuState ? 'show-menu' : 'hide-menu'}>
 				<div className="bar">
-					<a href={vanilla.toString()}>
+					<a href={urlVanilla.toString()}>
 						<img src={iconLogo.toString()} alt="Shebang" />
 					</a>
 					<button onClick={clickHandler}>
