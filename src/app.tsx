@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { NavBar } from './components/navBar';
 import { TapBox } from './components/tapBox';
 import { Reset } from './components/reset';
@@ -82,9 +82,6 @@ export const App = () => {
 	};
 	calcCombineMeasurements();
 
-	useEffect(() => {
-		console.log('Update');
-	}, [time, taps]);
 
 	return (
 		<>
