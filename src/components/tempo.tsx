@@ -1,4 +1,4 @@
-export function Tempo(props) {
+export const Tempo = (props) => {
 	return (
 		<div id="tempo">
 			{props.children}
@@ -11,4 +11,4 @@ export function Tempo(props) {
 			</div>
 		</div>
 	);
-}
+};

@@ -1,4 +1,4 @@
-export function Reset(props) {
+export const Reset = (props) => {
 	return (
 		<div id="reset-button">
 			<button
@@ -15,4 +15,4 @@ export function Reset(props) {
 			</button>
 		</div>
 	);
-}
+};

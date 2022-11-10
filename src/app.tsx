@@ -5,7 +5,7 @@ import { Reset } from './components/reset';
 import { Stats } from './components/stats';
 import { Tempo } from './components/tempo';
 
-export function App() {
+export const App = () => {
 	// tap timestamps; number of taps; time between taps in ms
 	const [time, setTime] = useState([]);
 	const [taps, setTaps] = useState(0);
@@ -19,7 +19,7 @@ export function App() {
 	let tempoFloat = '0';
 
 	// calculate the bpmIntervals in beats/minute
-	function calcIntervals() {
+	const calcIntervals = () => {
 		if (taps > 1) {
 			// difference between "the last array item" - "the one before"
 			const interval = time[time.length - 1] - time[time.length - 2];
@@ -27,11 +27,11 @@ export function App() {
 			const bpm = (1000 / interval) * 60;
 			bpmIntervals.push(Math.floor(bpm * 10) / 10);
 		}
-	}
+	};
 	calcIntervals();
 
 	// calculate the average bpm
-	function calcAverageBpm() {
+	const calcAverageBpm = () => {
 		if (bpmIntervals.length > 1) {
 			// sum all the bpmIntervals
 			const summedBpms = bpmIntervals.reduceRight((acc, curr) => {
@@ -40,7 +40,7 @@ export function App() {
 			const bpm = summedBpms / bpmIntervals.length;
 			bpmAverages.push(Math.floor(bpm * 10) / 10);
 		}
-	}
+	};
 	calcAverageBpm();
 
 	function calcAverageOverBPMs() {
@@ -53,7 +53,7 @@ export function App() {
 		}
 	}
 
-	function calcAverageOverTotalTime() {
+	const calcAverageOverTotalTime = () => {
 		if (taps > 3) {
 			// for accuracy: skip the first two timestamp
 			// difference between first timestamp and latest timestamp
@@ -63,10 +63,10 @@ export function App() {
 			let bpm = (1000 / bps) * 60;
 			return Math.floor(bpm * 10) / 10;
 		}
-	}
+	};
 
 	// combine the 2 different measurements
-	function calcCombineMeasurements() {
+	const calcCombineMeasurements = () => {
 		tempo1 = calcAverageOverTotalTime();
 		tempo2 = calcAverageOverBPMs();
 
@@ -81,7 +81,7 @@ export function App() {
 			tempo1 = tempo1.toFixed(1);
 			tempo2 = tempo2.toFixed(1);
 		}
-	}
+	};
 	calcCombineMeasurements();
 
 	useEffect(() => {
@@ -107,4 +107,4 @@ export function App() {
 			</main>
 		</>
 	);
-}
+};
