@@ -1,3 +1,5 @@
+import { ExternalLink } from './externalLink';
+
 // images
 const iconLogo = new URL('../assets/svg/icon-shebang-bw-small-zoomed.svg', import.meta.url);
 const iconCross = new URL('../assets/svg/icon-menu-cross.svg', import.meta.url);
@@ -34,13 +36,9 @@ export const NavMenu = (props) => {
 						The Kaboom BPM calculator: an application to calculate the tempo of a song.
 					</p>
 					<p>Instructions: tap in the rhythm to find the tempo of a piece of music.</p>
-					<a
-						href="https://github.com/kaboomshebang/kbsb-tempo-tapper/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<ExternalLink url="https://github.com/kaboomshebang/kbsb-tempo-tapper/">
 						Source code on: Github.com
-					</a>
+					</ExternalLink>
 
 					<h4>Install on iOS home-screen</h4>
 					<p>
@@ -53,13 +51,9 @@ export const NavMenu = (props) => {
 				<div className="menu-footer">
 					<p>
 						<span>Copyright &#169; {currentYear}</span>
-						<a
-							href="https://www.kaboomshebang.com"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<ExternalLink url="https://www.kaboomshebang.com">
 							Kaboom Shebang
-						</a>
+						</ExternalLink>
 					</p>
 				</div>
 			</div>

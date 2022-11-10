@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavMenu } from './navMenu';
+import { ExternalLink } from './externalLink';
 
 const logoKaboom = new URL('../assets/svg/logo-kaboom.svg', import.meta.url);
 const iconBurger = new URL('../assets/svg/icon-burger.svg', import.meta.url);
@@ -15,13 +16,9 @@ export const NavBar = () => {
 		<div id="navbar">
 			<div>
 				<h1>
-					<a
-						href="https://www.kaboomshebang.com"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<ExternalLink url="https://www.kaboomshebang.com">
 						<img src={logoKaboom.toString()} alt="Kaboom" />
-					</a>
+					</ExternalLink>
 				</h1>
 				<h2>
 					BPM Tempo Tapper <span className="nav-url">bpm.kbsb.app</span>
