@@ -7,8 +7,6 @@ export const Reset = (props) => {
 					props.tapHandler(0);
 					props.bpmIntervalsHandler([]);
 					props.bpmAveragesHandler([]);
-					props.tempoHandler1(undefined);
-					props.tempoHandler2(undefined);
 				}}
 			>
 				Reset

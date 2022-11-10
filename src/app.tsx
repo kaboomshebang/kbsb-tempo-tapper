@@ -11,8 +11,6 @@ export const App = () => {
 	const [taps, setTaps] = useState(0);
 	const [bpmIntervals, setBpmIntervals] = useState([]);
 	const [bpmAverages, setBpmAverages] = useState([]);
-	let [tempo1, setTempo1] = useState(undefined);
-	let [tempo2, setTempo2] = useState(undefined);
 
 	let tempo = 0;
 	let tempoInt = '0';
@@ -98,12 +96,10 @@ export const App = () => {
 						resetHandler={setTime}
 						bpmIntervalsHandler={setBpmIntervals}
 						bpmAveragesHandler={setBpmAverages}
-						tempoHandler1={setTempo1}
-						tempoHandler2={setTempo2}
 					/>
 				</Tempo>
 				<TapBox tapHandler={setTaps} timeHandler={setTime} />
-				<Stats taps={taps} tempo1={tempo1} tempo2={tempo2} />
+				<Stats taps={taps} />
 			</main>
 		</>
 	);
