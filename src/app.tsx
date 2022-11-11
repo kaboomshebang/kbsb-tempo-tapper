@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavBar } from './components/navBar';
 import { TapBox } from './components/tapBox';
 import { Reset } from './components/reset';
