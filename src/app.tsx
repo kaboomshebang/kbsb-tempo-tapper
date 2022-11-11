@@ -59,7 +59,7 @@ export const App = () => {
 		}
 		if (taps > 3) {
 			taps < 10 && calcMeanLastX(2);
-			taps >= 10 && calcMeanLastX(taps - Math.floor(taps * 0.5));
+			taps >= 10 && calcMeanLastX(taps - Math.floor(taps * 0.2));
 
 			// convert tempo to int and float for tempo component
 			let digits = tempo.toFixed(0).toString().length;
