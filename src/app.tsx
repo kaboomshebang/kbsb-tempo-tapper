@@ -1,9 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
 import { NavBar } from './components/navBar';
 import { TapBox } from './components/tapBox';
 import { Reset } from './components/reset';
 import { Stats } from './components/stats';
 import { Tempo } from './components/tempo';
+
+//! TODO: fix useEffect problems
 
 export const App = () => {
 	// tap timestamps; number of taps; time between taps in ms
@@ -28,24 +31,29 @@ export const App = () => {
 
 	// calculate the bpmIntervals in beats/minute
 	const calcIntervals = () => {
+		console.log('test intervals');
 		// difference between "the last array item" - "the one before"
 		const interval = time[time.length - 1] - time[time.length - 2];
 		// 1000ms / interval === Bps * 60 === Bpm
 		const bpm = (1000 / interval) * 60;
 
-		bpmIntervals.push(Math.floor(bpm * 10) / 10);
+		bpmIntervals = [...bpmIntervals, Math.floor(bpm * 10) / 10];
+		// bpmIntervals.push(Math.floor(bpm * 10) / 10);
 	};
 
 	// calculate the bpm averages
 	const calcAverageBpm = () => {
+		console.log('test avarage');
 		// sum all the bpmIntervals
 		const summedBpms = bpmIntervals.reduceRight((acc, curr) => acc + curr);
 		const bpm = summedBpms / bpmIntervals.length;
-		bpmAverages.push(Math.floor(bpm * 10) / 10);
+		bpmAverages = [...bpmAverages, Math.floor(bpm * 10) / 10];
+		// bpmAverages.push(Math.floor(bpm * 10) / 10);
 	};
 
-	// calculate the mean of the last 10 bpm averages
+	// calculate the mean of the last X items of the bpm averages array
 	const calcMeanLastX = (x) => {
+		console.log('test mean');
 		// sum all the bpmIntervals
 		const last10 = bpmAverages.slice(x * -1);
 		const summedLast10 = last10.reduceRight((acc, curr) => {
@@ -59,6 +67,7 @@ export const App = () => {
 
 	// calculate the tempo
 	const executeCalculations = () => {
+		console.log('test execute');
 		if (taps > 1) {
 			calcIntervals();
 		}
@@ -76,7 +85,9 @@ export const App = () => {
 		}
 	};
 
-	useEffect(executeCalculations, [time]);
+	//! TODO: fix useEffect problems
+
+	useEffect(executeCalculations, [taps, time]);
 
 	return (
 		<>
