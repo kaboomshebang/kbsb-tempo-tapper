@@ -26,4 +26,9 @@ yarn build
 ## TODOs
 
 - [X] Fine-tune tempo calculation
+- [ ] Experiment with two more calculations:
+    - [ ] Measure from start tapping until last tap (A-Z / T)
+    - [ ] Measure taps intervals and analyze the BPM based on a mean frequence. (Based on a standard deviation?)
+        - [Function std](https://mathjs.org/docs/reference/functions/std.html)
+- [ ] Add an accuracy bar. Bottom window. From L->R >> from Red to Green. From about 50 taps is Green-isch, which means pretty accurate.
 - [ ] Add Typescript types
