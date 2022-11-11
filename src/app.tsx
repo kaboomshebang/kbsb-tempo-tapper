@@ -10,8 +10,16 @@ export const App = () => {
 	const [time, setTime] = useState([]);
 	const [taps, setTaps] = useState(0);
 
-	const [bpmIntervals, setBpmIntervals] = useState([]);
-	const [bpmAverages, setBpmAverages] = useState([]);
+	// store bpm calculations
+	let bpmIntervals = [];
+	let bpmAverages = [];
+
+	const resetBpmIntervals = () => {
+		bpmIntervals = [];
+	};
+	const resetBpmAverages = () => {
+		bpmAverages = [];
+	};
 
 	// prepare values for DOM rendering
 	let tempo = 0;
@@ -67,7 +75,8 @@ export const App = () => {
 			tempoFloat = tempo.toFixed(1).slice(-1);
 		}
 	};
-	executeCalculations();
+
+	useEffect(executeCalculations, [time]);
 
 	return (
 		<>
@@ -77,8 +86,8 @@ export const App = () => {
 					<Reset
 						tapHandler={setTaps}
 						resetHandler={setTime}
-						bpmIntervalsHandler={setBpmIntervals}
-						bpmAveragesHandler={setBpmAverages}
+						bpmIntervalsHandler={resetBpmIntervals}
+						bpmAveragesHandler={resetBpmAverages}
 					/>
 				</Tempo>
 				<TapBox tapHandler={setTaps} timeHandler={setTime} />
