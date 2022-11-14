@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="assets/cache.manifest">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -48,5 +48,11 @@
 			<p>Calculate the tempo of a song: tap in the rhythm to detect number of beats per minute.</p>
 			<p>This app requires Javascript, please enable it or use another browser.</p>
 		</noscript>
+		<script>
+			function updateSite(event) {
+				window.location.reload();
+			}
+			window.applicationCache.addEventListener('updateready', updateSite, false);
+			</script>
 	</body>
 </html>
