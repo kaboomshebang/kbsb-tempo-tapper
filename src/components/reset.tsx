@@ -3,10 +3,9 @@ export const Reset = (props) => {
 		<div id="reset-button">
 			<button
 				onClick={() => {
-					props.resetHandler([]);
+					props.timeHandler([]);
 					props.tapHandler(0);
-					props.bpmIntervalsHandler([]);
-					props.bpmAveragesHandler([]);
+					props.resetHandler();
 				}}
 			>
 				Reset

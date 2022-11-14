@@ -20,11 +20,12 @@ export const App = () => {
 	const [time, setTime] = useState([]);
 	const [taps, setTaps] = useState(0);
 
-	const resetBpmIntervals = () => {
+	const reset = () => {
 		bpmIntervals = [];
-	};
-	const resetBpmAverages = () => {
 		bpmAverages = [];
+		tempo = 0;
+		tempoInt = '0';
+		tempoFloat = '0';
 	};
 
 	// calculate the bpmIntervals in beats/minute
@@ -81,12 +82,7 @@ export const App = () => {
 			<NavBar />
 			<main>
 				<Tempo taps={taps} tempoInt={tempoInt} tempoFloat={tempoFloat}>
-					<Reset
-						tapHandler={setTaps}
-						resetHandler={setTime}
-						bpmIntervalsHandler={resetBpmIntervals}
-						bpmAveragesHandler={resetBpmAverages}
-					/>
+					<Reset tapHandler={setTaps} timeHandler={setTime} resetHandler={reset} />
 				</Tempo>
 				<TapBox tapHandler={setTaps} timeHandler={setTime} />
 				<Stats taps={taps} />
